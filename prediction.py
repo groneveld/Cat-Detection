@@ -7,7 +7,6 @@ IMAGE_FILE_NAME = 'test/cats/cat.0.jpg'
 
 
 def load(filename: str):
-    psf = np.ones((200, 200)) / 25
     _image = image.load_img(filename, color_mode='grayscale', target_size=(200, 200))
     np_image = np.array(_image)
     np_image = transform.resize(np_image, (200, 200, 3))
